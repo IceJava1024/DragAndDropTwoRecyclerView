@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DragAndDropTwoRecyclerView</string>
+    <string name="common_format_title">Common Format</string>
+    <string name="other_format_title">Other Format</string>
+
+    <string name="aac_format">aac</string>
+    <string name="csv_format">csv</string>
+    <string name="docx_format">docx</string>
+    <string name="flac_format">flac</string>
+    <string name="gif_format">gif</string>
+    <string name="html_format">html</string>
+    <string name="jpg_format">jpg</string>
+    <string name="js_format">js</string>
+    <string name="m4a_format">m4a</string>
+    <string name="midi_format">midi</string>
+    <string name="mkv_format">mkv</string>
+    <string name="mp3_format">mp3</string>
+    <string name="mp4_format">mp4</string>
+    <string name="ogg_format">ogg</string>
+    <string name="ogv_format">ogv</string>
+    <string name="pdf_format">pdf</string>
+    <string name="png_format">png</string>
+    <string name="ppt_format">ppt</string>
+    <string name="rar_format">rar</string>
+    <string name="svg_format">svg</string>
+    <string name="txt_format">txt</string>
+    <string name="wav_format">wav</string>
+    <string name="webm_format">webm</string>
+    <string name="webp_format">webp</string>
+    <string name="xlsx_format">xlsx</string>
+    <string name="zip_format">zip</string>
+</resources>
