@@ -7,10 +7,12 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
-import com.espresso.draganddrop.adapter.DragAndDropAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.espresso.draganddrop.databinding.ActivityMainBinding
 import com.espresso.draganddrop.model.FormatModel
 import com.espresso.draganddrop.model.TypeModel
+import com.espresso.draganddrop.utils.DragAndDropAdapter
+import com.espresso.draganddrop.utils.DragAndDropItemDecoration
 import com.espresso.draganddrop.viewmodel.DragAndDropViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +34,12 @@ class MainActivity : AppCompatActivity() {
             binding.otherFormatRecyclerView to TypeModel.OTHER
         ).map {
             val (view, type) = it
+            view.addItemDecoration(
+                DragAndDropItemDecoration(
+                    resources = view.context.resources,
+                    columnCount = COLUMN_COUNT
+                )
+            )
             view.layoutManager = GridLayoutManager(view.context, COLUMN_COUNT)
             view.adapter = DragAndDropAdapter(type).apply {
                 submitList(
@@ -46,9 +54,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private val dragListener = View.OnDragListener { view, event ->
-        event?.let {
-            if (it.action == DragEvent.ACTION_DROP) {
+    private val dragListener = View.OnDragListener { targetView, event ->
+        if (targetView == null || targetView !is RecyclerView || event == null) {
+            false
+        }
+
+        when (event.action) {
+            DragEvent.ACTION_DRAG_STARTED -> {
+
+            }
+            DragEvent.ACTION_DRAG_ENDED -> {
 
             }
         }
@@ -56,6 +71,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val COLUMN_COUNT: Int = 4
+        const val COLUMN_COUNT: Int = 3
     }
 }

@@ -1,4 +1,4 @@
-package com.espresso.draganddrop.adapter
+package com.espresso.draganddrop.utils
 
 import android.content.ClipData
 import android.view.LayoutInflater
@@ -42,10 +42,16 @@ class DragAndDropAdapter(
             binding.root.setOnLongClickListener { view ->
                 val data = ClipData.newPlainText("", "")
                 val shadowBuilder = View.DragShadowBuilder(view)
-                view?.startDragAndDrop(data, shadowBuilder, view, 0)
+                if (view?.startDragAndDrop(data, shadowBuilder, view, 0) == true) {
+                    setFormatItemVisibility(view, false)
+                }
                 false
             }
         }
+    }
+
+    fun setFormatItemVisibility(itemView: View, isVisible: Boolean) {
+        itemView.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
     }
 
     companion object {

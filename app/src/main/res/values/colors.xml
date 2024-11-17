@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="app_background">#c9d6df</color>
 
-    <color name="format_area_background_color">#FFFFFFFF</color>
+<resources>
+    <color name="app_background">#7A8187</color>
+    <color name="app_title_text_color">#FFFFFF</color>
+
+    <color name="scroll_view_background_color">#FFFFFFFF</color>
+
+    <color name="format_item_background_color">#EDEDED</color>
 </resources>

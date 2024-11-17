@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">DragAndDropTwoRecyclerView</string>
     <string name="app_title">Drag And Drop Two RecyclerView</string>
-    <string name="common_format_title">Common Format</string>
-    <string name="other_format_title">Other Format</string>
+    <string name="common_format_title">— Common Format —</string>
+    <string name="other_format_title">— Other Format —</string>
 
     <string name="aac_format">aac</string>
     <string name="csv_format">csv</string>
