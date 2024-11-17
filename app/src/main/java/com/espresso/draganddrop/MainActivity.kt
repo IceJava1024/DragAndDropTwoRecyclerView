@@ -1,6 +1,8 @@
 package com.espresso.draganddrop
 
 import android.os.Bundle
+import android.view.DragEvent
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -40,10 +42,20 @@ class MainActivity : AppCompatActivity() {
                     }
                 )
             }
+            view.setOnDragListener(dragListener)
         }
     }
 
+    private val dragListener = View.OnDragListener { view, event ->
+        event?.let {
+            if (it.action == DragEvent.ACTION_DROP) {
+
+            }
+        }
+        true
+    }
+
     companion object {
-        val COLUMN_COUNT: Int = 4
+        const val COLUMN_COUNT: Int = 4
     }
 }

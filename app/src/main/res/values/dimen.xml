@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="app_padding">5dp</dimen>
+    <dimen name="app_title_text_size">20sp</dimen>
+    <dimen name="app_title_padding">10dp</dimen>
 
-    <dimen name="format_area_padding">5dp</dimen>
+    <dimen name="sub_title_text_size">16sp</dimen>
+    <dimen name="sub_title_margin_top">10dp</dimen>
+    <dimen name="sub_title_margin_bottom">5dp</dimen>
+    <dimen name="custom_area_layout_padding">5dp</dimen>
     <dimen name="format_area_background_radius">10dp</dimen>
 
     <dimen name="format_item_width">100dp</dimen>
