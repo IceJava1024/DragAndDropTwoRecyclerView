@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
     private val commonFormatData = FormatModel.entries.filter { it.formatType == TypeModel.COMMON }
     private val otherFormatData = FormatModel.entries.filter { it.formatType == TypeModel.OTHER }
 
+    private val commonFormatAdapter get() =
+        binding.commonFormatRecyclerView.adapter as DragAndDropAdapter
+    private val otherFormatAdapter get() =
+        binding.otherFormatRecyclerView.adapter as DragAndDropAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -61,10 +66,12 @@ class MainActivity : AppCompatActivity() {
 
         when (event.action) {
             DragEvent.ACTION_DRAG_STARTED -> {
-
+                commonFormatAdapter.setShakeAnimatorState(true)
+                otherFormatAdapter.setShakeAnimatorState(true)
             }
             DragEvent.ACTION_DRAG_ENDED -> {
-
+                commonFormatAdapter.setShakeAnimatorState(false)
+                otherFormatAdapter.setShakeAnimatorState(false)
             }
         }
         true

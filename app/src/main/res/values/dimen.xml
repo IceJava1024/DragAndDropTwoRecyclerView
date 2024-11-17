@@ -15,7 +15,6 @@
     <dimen name="format_item_height">100dp</dimen>
     <dimen name="format_item_image_width">45dp</dimen>
     <dimen name="format_item_image_height">45dp</dimen>
-    <dimen name="format_item_image_margin_top">12dp</dimen>
     <dimen name="format_item_background_radius">10dp</dimen>
     <dimen name="format_item_vertical_offset">5dp</dimen>
 </resources>
